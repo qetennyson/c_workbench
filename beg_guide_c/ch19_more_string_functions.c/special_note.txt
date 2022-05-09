@@ -1,0 +1,8 @@
+gets() and puts() should never be used.
+they are dangerous functions responsible for buffer overflows.
+string functions in general can be misused easily in C
+check Effective C. (Seacord) for reference material starting on
+pp. 134.  
+
+Also, Annex K bounds-checking interfaces are valuable in this space
+(Seacord)

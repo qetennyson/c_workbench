@@ -1,0 +1,13 @@
+gets() -\> fgets() - read characters
+strcpy() -\> strncpy() - copy content of the buffer
+strcat() -\> strncat() - buffer concatenation
+sprintf() -\> snprintf() - fill buffer with data of different types
+(f)scanf() - read from STDIN
+getwd() - return working directory
+realpath() - return absolute (full) path
+Use safe equivalent functions, which check the buffers length, whenever it’s possible. Namely:
+
+gets() -\> fgets()
+strcpy() -\> strncpy()
+strcat() -\> strncat()
+sprintf() -\> snprintf()

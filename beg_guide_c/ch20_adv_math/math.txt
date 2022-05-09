@@ -1,0 +1,6 @@
+C has tools like ceil and floor which come from <math.h>
+There are also trigonometric functions, and pow, sqrt functions.
+These behave similarly to Python, but probably aren't worth building 
+extra code for unless you need them presently.
+
+Random, on the other hand, is something we can expect to appear :)
