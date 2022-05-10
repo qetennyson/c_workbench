@@ -1,0 +1,40 @@
+The heap is a reference to a large, continguous heap of memory available to your program.
+
+structure:
+| OS   |
+  ^
+| .c   |
+  ^
+| vars |
+  ^
+| heap |
+
+Free heap memory / unallocated memory is called 'free heap'
+Heap in use by your app is called 'allocated heap'
+
+Nothing has used the heap up to this point.  
+
+## Why?
+
+Heap doesn't replace variables / arrays, etc.  
+Programmers declare what they know ahead of time when possible.
+Other things are hard to predict, e.g. a user working with a word processing document. 
+It is impossible to know how long the doc could be.  You also wouldn't
+want to allocate WORD_DOC_MAX at any point, because that would very wasteful.
+
+The heap is the memory you draw upon when the user needs it.
+The memory gets allocated at runtime through malloc() and freed with free().
+
+malloc() - requires <stdlib.h> and allocates memory
+free() - requires <stdlib.h> and frees allocated memory
+
+malloc() breakdown:
+temps = (int *) malloc(10 * sizeof(int));
+
+The latter part is easy.  malloc is simply allocating 10 chunks of memory the size of ints.
+The former part is a typecast.  This is a pointer typecast, the * inside indicates this.
+
+If you want to use malloc() to allocate ints, floats, or whatever, you have to typecast the malloc in this way
+
+When there is not enough memory to allocate, malloc will point its pointer variable to 0.  0 will never be an address for the pointer variable, therefore this always indicates malloc() has failed to allocate.
+.

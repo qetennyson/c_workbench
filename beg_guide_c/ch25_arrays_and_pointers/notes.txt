@@ -1,0 +1,14 @@
+An array is simply a special kind of pointer.
+
+Remember, pointers are valuable because they provide us a reference to an object in memory.
+It could potentially be quite expensive to move objects into memory for each time they are needed.
+For example, you wouldn't want to make 400 copies of a 20MB object just to do some simple operations on that object.
+
+In the case of arrays, you can use:
+* pointer notation to get to array values
+* array notation to get to pointed-at values
+
+Character strings and pointers have an important relationship.
+By combining pointer notation and array notation you can store and reference character strings more easily.
+
+Lastly, pointers give us access to the heap.  More in ch26.
